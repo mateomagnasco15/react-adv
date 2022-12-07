@@ -1,5 +1,4 @@
 import { ProductCard, ProductImg, ProductTitle, ProductButtons } from '../components';
-import '../styles/custome-styles.css';
 import { products } from '../data/products';
 
 const product = products[0];
@@ -13,7 +12,6 @@ export const ShoppingPage = () => {
       <ProductCard
         key={product.id}
         product={product}
-        className="bg-dark text-white"
         initialValues={{
           count: 4, 
           maxCount: 10
@@ -22,14 +20,14 @@ export const ShoppingPage = () => {
         {
           ({reset, isCountMaxReached}) => (
             <>
-              <ProductImg className="custome-img"/>
+              <ProductImg />
               <ProductTitle />
-              <ProductButtons className = "custome-buttons"/>
+              <ProductButtons/>
               
-              <button onClick={reset}>Reset</button>
+             {/*  <button onClick={reset}>Reset</button>
               {isCountMaxReached && <p>Es el limite</p>}
               <button>-2</button>
-              <button>+2</button>
+              <button>+2</button> */}
             </>
           )
         }
